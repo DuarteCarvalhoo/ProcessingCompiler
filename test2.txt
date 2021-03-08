@@ -1,0 +1,19 @@
+int r;
+int a=1;
+
+void setup(){
+  size(500,500);
+  fill(255,0,0);
+  r=30;
+ }
+
+void draw(){
+  background(0);
+  ellipse(mouseX,mouseY,2*r,2*r); 
+}
+
+int tecla(){
+  r=50;
+  int aux = 20+r;
+  return aux;
+}

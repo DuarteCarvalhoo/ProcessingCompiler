@@ -1,0 +1,36 @@
+import ddf.minim.*;
+
+int janela=0;
+
+int n; 
+int timerInicio=0, timerInstrucoes=0, timerSair=0;  int timerVoltar=0;  
+
+void setup() {
+  for (int i=0; i<timerSelecionarNiveis.lenght; i++) {      
+    timerSelecionarNiveis=0;
+  }
+  
+  int n = 2 + 3;
+
+  size(800,800);
+}
+
+void draw() {
+    if (janela==0) {
+    inicio();
+  } else if (janela>=1 && janela<=10) {
+    geradorNivel();
+  } else if (janela==11) {
+    conclusao();
+  } else if (janela==12) {
+    selecionarNiveis();
+  } else if (janela==13) {
+    perdeu();
+  } else if (janela==14) {
+    proxNivel();
+  } else if (janela==15) {
+    instrucoes();
+  }
+      fill(0);
+  ellipse(mouseX, mouseY, 10, 10);
+}
